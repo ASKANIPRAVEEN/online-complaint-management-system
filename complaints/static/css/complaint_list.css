@@ -1,0 +1,237 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    overflow-y: auto; /* Allows scrolling if content is too long */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Centered Form with Spacing */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+    margin: 50px auto; /* Adds top and bottom spacing */
+}
+
+/* Ensures proper spacing on smaller screens */
+@media (max-width: 768px) {
+    .container {
+        margin: 30px auto; /* Reduce margin for smaller screens */
+        padding: 1.5rem;
+    }
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    animation: slideDown 1s ease-in-out;
+}
+
+.complaints {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.complaint {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.complaint:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.complaint h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.complaint p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.status {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FF9800;; /* Green for resolved, yellow for in progress, red for pending */
+}
+
+.status.Pending {
+    color: #FF9800; /* Orange for pending */
+}
+
+.status.In Progress {
+    color: #FFEB3B; /* Yellow for in progress */
+}
+
+.status.Resolved {
+    color: #4CAF50; /* Green for resolved */
+}
+
+.complaint-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+}
+
+.download-btn {
+    background: #007BFF;
+}
+
+.download-btn:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.feedback-btn {
+    background: #FF9800;
+}
+
+.feedback-btn:hover {
+    background: #e68900;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-btn {
+    background: #6a11cb;
+    margin-top: 1.5rem;
+}
+
+.back-btn:hover {
+    background: #4b0d8f;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Animation */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.circle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 10s infinite ease-in-out;
+}
+
+.circle:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 5%;
+    animation-duration: 8s;
+}
+
+.circle:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 70%;
+    left: 80%;
+    animation-duration: 12s;
+}
+
+.circle:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 30%;
+    animation-duration: 10s;
+}
+
+.circle:nth-child(4) {
+    width: 250px;
+    height: 250px;
+    top: 20%;
+    left: 60%;
+    animation-duration: 15s;
+}
+
+.circle:nth-child(5) {
+    width: 120px;
+    height: 120px;
+    top: 80%;
+    left: 20%;
+    animation-duration: 9s;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}

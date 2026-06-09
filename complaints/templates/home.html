@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Complaint Management System</title>
+    <!-- Load static files -->
+    {% load static %}
+    <!-- Link your CSS file -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <!-- Include Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Complaint Management System</h1>
+        <div class="links">
+            <a href="{% url 'user_register' %}" class="btn">Register</a>
+            <a href="{% url 'user_login' %}" class="btn">Login</a>
+            <a href="{% url 'admin_login' %}" class="btn">Admin Login</a>
+        </div>
+    </div>
+
+    <!-- Add a background animation -->
+    <div class="background-animation">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Include JavaScript for interactivity -->
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>

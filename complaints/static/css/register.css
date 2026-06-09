@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #007BFF; /* Blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Changed height to min-height */
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Centering the form with proper margin */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(176, 176, 176, 0.2);
+    text-align: left;
+    width: 380px;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.5s ease-in-out;
+    color: white; /* White text for contrast */
+    backdrop-filter: blur(10px); /* Blurry glass effect */
+    
+    /* Add margin to allow full form visibility */
+    margin: 50px auto; /* Adds spacing above and below */
+}
+
+/* Form Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Styling */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Styling */
+.registration-form input {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent White Input Background */
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Placeholder Text */
+.registration-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Buttons */
+.btn {
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.register-btn {
+    background: #28a745;
+    color: white;
+}
+
+.login-btn {
+    background: #ffc107;
+    color: white;
+}
+
+/* Button Hover Effects */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.home-btn {
+    background: aliceblue;
+}
+
+.home-btn:hover {
+    background: aqua;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Error Message Styling */
+.error-message {
+    background: rgba(255, 0, 0, 0.8); /* Red Background */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInError 0.5s ease-in-out forwards;
+}
+
+/* Error Message Fade-in Animation */
+@keyframes fadeInError {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background Animation */
+.background-animation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.circle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2); /* White transparent floating circles */
+    border-radius: 50%;
+    animation: float 6s infinite linear alternate;
+}
+
+/* Different Sizes & Positions */
+.circle:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    left: 20%;
+    animation-duration: 6s;
+}
+.circle:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    top: 40%;
+    left: 60%;
+    animation-duration: 8s;
+}
+.circle:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    top: 70%;
+    left: 30%;
+    animation-duration: 5s;
+}
+.circle:nth-child(4) {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 80%;
+    animation-duration: 7s;
+}
+.circle:nth-child(5) {
+    width: 90px;
+    height: 90px;
+    top: 80%;
+    left: 50%;
+    animation-duration: 6s;
+}
+
+/* Floating Animation */
+@keyframes float {
+    from {
+        transform: translateY(0px);
+        opacity: 0.6;
+    }
+    to {
+        transform: translateY(-50px);
+        opacity: 0.3;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}

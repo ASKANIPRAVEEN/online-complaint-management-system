@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint List</title>
+    <!-- Load static files -->
+    {% load static %}
+    <!-- Link your CSS file -->
+    <link rel="stylesheet" href="{% static 'css/complaint_list.css' %}">
+    <!-- Include Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Complaints</h1>
+        <div class="complaints">
+            {% for complaint in complaints %}
+            <div class="complaint">
+                <h2>{{ complaint.title }}</h2>
+                <p>{{ complaint.description }}</p>
+                <p>Status: <span class="status">{{ complaint.status }}</span></p>
+                
+                <!-- Display Document -->
+                {% if complaint.document %}
+                <p><a href="{{ complaint.document.url }}" target="_blank" class="btn download-btn">Download Document</a></p>
+                {% endif %}
+                
+                <!-- Display Image -->
+                {% if complaint.image %}
+                <img src="{{ complaint.image.url }}" alt="Complaint Image" class="complaint-image">
+                {% endif %}
+                <br>
+                <a href="{% url 'feedback' complaint.id %}" class="btn feedback-btn">Give Feedback</a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="back">
+            <a href="{% url 'post_complaint' %}" class="btn back-btn">Back</a>
+        </div>
+    </div>
+
+    <!-- Add a background animation -->
+    <div class="background-animation">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+</html>
