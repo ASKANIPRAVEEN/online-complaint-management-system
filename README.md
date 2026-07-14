@@ -1,44 +1,118 @@
-\# Online Complaint Management System
+# 📝 Online Complaint Management System
 
+Online Complaint Management System is a Django-based web application that enables users to register complaints, upload supporting documents, track complaint status, and provide feedback. The system streamlines complaint handling and improves communication between users and administrators.
 
+## 🚀 Features
 
-A Django-based web application for complaint registration and tracking.
+### 👤 User Features
 
+* User registration and login
+* Secure authentication
+* Submit complaints with file attachments
+* View complaint history
+* Track complaint status
+* Submit feedback after complaint resolution
 
+### 📋 Complaint Management
 
-\## Features
+* Register complaints with relevant details
+* Upload supporting documents or images
+* View all submitted complaints
+* Complaint status tracking
 
+### 🛠 Admin Features
 
+* Admin login
+* View and manage complaints
+* Update complaint status
+* Monitor user complaints
+* Review user feedback
 
-\- User Authentication
+## 🧰 Technologies Used
 
-\- Complaint Registration
+* Python
+* Django
+* SQLite
+* HTML
+* CSS
+* Bootstrap
+* JavaScript
 
-\- Complaint Tracking
+## 📂 Project Structure
 
-\- File Upload
+```text
+online-complaint-management-system/
+│
+├── complaint_app/
+│   ├── models.py
+│   ├── views.py
+│   ├── forms.py
+│   ├── urls.py
+│   ├── templates/
+│   └── static/
+│
+├── manage.py
+├── requirements.txt
+└── README.md
+```
 
-\- Admin Dashboard
+## ⚙️ Installation and Setup
 
+### 1️⃣ Clone the Repository
 
+```bash
+git clone https://github.com/ASKANIPRAVEEN/online-complaint-management-system.git
+cd online-complaint-management-system
+```
 
-\## Technologies
+### 2️⃣ Create a Virtual Environment
 
+```bash
+python -m venv venv
+```
 
+### 3️⃣ Activate the Virtual Environment
 
-\- Python
+**Windows**
 
-\- Django
+```bash
+venv\Scripts\activate
+```
 
-\- HTML
+**Linux/macOS**
 
-\- CSS
+```bash
+source venv/bin/activate
+```
 
-\- Bootstrap
+### 4️⃣ Install Dependencies
 
-\- JavaScript
+```bash
+pip install -r requirements.txt
+```
 
-\- SQLite
+### 5️⃣ Apply Database Migrations
 
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
 
+### 6️⃣ Run the Development Server
 
+```bash
+python manage.py runserver
+```
+
+Open your browser and visit:
+
+```text
+http://127.0.0.1:8000/
+```
+
+## 👨‍💻 Author
+
+**Praveen Askani**
+
+* GitHub: https://github.com/ASKANIPRAVEEN
+* LinkedIn: https://www.linkedin.com/in/praveen-askani
